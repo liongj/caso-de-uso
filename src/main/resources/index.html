@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Caso de Uso</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>Plantilla de Caso de Uso</h1>
+        <p>Analisis de Sistemas I</p>
+    </div>
+
+    <div class="section">
+        <h2>Identificacion</h2>
+        <div class="fila">
+            <div class="campo">
+                <label>Nombre del Caso de Uso</label>
+                <input type="text" placeholder="Ej: Iniciar Sesion" />
+            </div>
+            <div class="campo">
+                <label>Codigo</label>
+                <input type="text" placeholder="Ej: CU-001" />
+            </div>
+            <div class="campo">
+                <label>Autor</label>
+                <input type="text" placeholder="Tu nombre" />
+            </div>
+            <div class="campo">
+                <label>Fecha</label>
+                <input type="date" id="fecha" />
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Actores</h2>
+        <div class="fila">
+            <div class="campo">
+                <label>Actor Principal</label>
+                <input type="text" placeholder="Ej: Usuario" />
+            </div>
+            <div class="campo">
+                <label>Actores Secundarios</label>
+                <input type="text" placeholder="Ej: Administrador" />
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Descripcion</h2>
+        <div class="campo full">
+            <label>Descripcion General</label>
+            <textarea placeholder="Describe el objetivo del caso de uso..."></textarea>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Condiciones</h2>
+        <div class="fila">
+            <div class="campo full">
+                <label>Precondiciones</label>
+                <textarea placeholder="Que debe cumplirse antes..."></textarea>
+            </div>
+            <div class="campo full">
+                <label>Postcondiciones</label>
+                <textarea placeholder="Que pasa despues de ejecutarse..."></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Flujo Principal</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Actor</th>
+                <th>Sistema</th>
+            </tr>
+            </thead>
+            <tbody id="flujo-principal">
+            <tr>
+                <td>1</td>
+                <td><input type="text" placeholder="El usuario..." /></td>
+                <td><input type="text" placeholder="El sistema..." /></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><input type="text" /></td>
+                <td><input type="text" /></td>
+            </tr>
+            </tbody>
+        </table>
+        <button class="btn-agregar" onclick="agregarFila()">+ Agregar paso</button>
+    </div>
+
+    <div class="section">
+        <h2>Flujo Alternativo</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Condicion</th>
+                <th>Accion</th>
+            </tr>
+            </thead>
+            <tbody id="flujo-alternativo">
+            <tr>
+                <td>A1</td>
+                <td><input type="text" placeholder="Si ocurre..." /></td>
+                <td><input type="text" placeholder="El sistema hace..." /></td>
+            </tr>
+            </tbody>
+        </table>
+        <button class="btn-agregar" onclick="agregarFilaAlt()">+ Agregar excepcion</button>
+    </div>
+
+    <div class="section">
+        <h2>Notas</h2>
+        <div class="campo full">
+            <label>Observaciones adicionales</label>
+            <textarea placeholder="Reglas de negocio, restricciones..."></textarea>
+        </div>
+    </div>
+
+    <div class="acciones">
+        <button class="btn-imprimir" onclick="window.print()">Imprimir / Guardar PDF</button>
+    </div>
+
+    <div class="footer">
+        <p>Kendall, K. &amp; Kendall, J. (2011). Analisis y Diseno de Sistemas. Pearson.</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
